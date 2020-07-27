@@ -5,7 +5,7 @@
 cd src
 if [ ! -e virtualenv ]; then
   virtualenv virtualenv
-  source virtualenv/bin/activate
+  . virtualenv/bin/activate
   pip3 install requests slackweb
   deactivate
 fi
