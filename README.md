@@ -21,9 +21,9 @@
 
     https://api.slack.com/messaging/webhooks
 
-名前は自分の好きなもの、Workspaceで通知を受けたいSlack Workspaceを指定します。Workspaceの管理者が承認すると、以下に表示されるようになります。
+名前は自分の好きなもの、Workspaceで通知を受けたいSlack Workspaceを指定します。Workspaceの管理者が承認すると、以下に表示されるようになります(xxx.slack.comは、登録したworkspace)。
 
-    https://smrjprj.slack.com/apps/manage
+    https://xxx.slack.com/apps/manage
     
 以下にアクセスします。
 
