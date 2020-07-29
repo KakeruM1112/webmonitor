@@ -21,9 +21,9 @@
 
     https://api.slack.com/messaging/webhooks
 
-名前は自分の好きなもの、Workspaceで通知を受けたいSlack Workspaceを指定します。Workspaceの管理者が承認すると、以下に表示されるようになります。
+名前は自分の好きなもの、Workspaceで通知を受けたいSlack Workspaceを指定します。Workspaceの管理者が承認すると、以下に表示されるようになります(xxx.slack.comは、登録したworkspace)。
 
-    https://smrjprj.slack.com/apps/manage
+    https://xxx.slack.com/apps/manage
     
 以下にアクセスします。
 
@@ -73,7 +73,7 @@ IBM Cloudにブラウザでアクセスし、ダッシュボードからFunction
 
     */10 * * * *
 
-Createをクリックします。次にトリガにパラメータを付与します。左にメニューからParametersを選びます。Add Parameterを選びます。これまでと同様にurlをslack_webhook_urlを設定します。なおこの画面ではParameter Valueは""で囲まないといけないので注意してください。Saveをクリックして保存します。
+Createをクリックします。次にトリガにパラメータを付与します。左にメニューからParametersを選びます。Add Parameterを選びます。これまでと同様にurlとslack_webhook_urlを設定します。なおこの画面ではParameter Valueは""で囲まないといけないので注意してください。Saveをクリックして保存します。
 
 最後にトリガにアクションを追加します。左のメニューからConnected Actionsをクリックします。Addをクリックします。Select Existingを選び、作成しておいたwebmonitorアクションを選んでAddします。
 
