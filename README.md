@@ -35,7 +35,7 @@
 
 以下を実行します。これでvirtualenv環境に入ります。
 
-    . virtualenv/bin/activate
+    . src/virtualenv/bin/activate
 
 以下で実行します。
 
