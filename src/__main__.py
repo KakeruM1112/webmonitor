@@ -23,6 +23,8 @@ def main(args):
         status = resp.status_code
         if status < 200 or 400 <= status:
             notify_slack(url, status, slack_webhook_url)
+    except requests.exceptions.ConnectTimeout:
+        notify_slack(url, "Request timedout. (timeout = %d)" % timeout, slack_webhook_url)
     except:
         notify_slack(url, traceback.format_exc(), slack_webhook_url)
 
