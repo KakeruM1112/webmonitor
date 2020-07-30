@@ -2,7 +2,6 @@ import traceback
 import json
 from pprint import pprint
 import requests
-import ssl
 import sys
 import slackweb
 
