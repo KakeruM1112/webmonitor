@@ -4,6 +4,7 @@ from pprint import pprint
 import requests
 import sys
 import slackweb
+from requests.exceptions import Timeout
 
 def send_mail():
     pass
@@ -22,12 +23,11 @@ def main(args):
         status = resp.status_code
         if status < 200 or 400 <= status:
             notify_slack(url, status, slack_webhook_url)
-    except requests.exceptions.ConnectTimeout:
+        return {"status": status}
+    except Timeout:
         notify_slack(url, "Request timedout. (timeout = %d)" % timeout, slack_webhook_url)
     except:
         notify_slack(url, traceback.format_exc(), slack_webhook_url)
-
-    return {"status": status}
 
 if __name__ == '__main__':
     pprint(main(json.loads(sys.argv[1])))
