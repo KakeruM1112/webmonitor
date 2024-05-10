@@ -91,3 +91,10 @@ Createをクリックします。次にトリガにパラメータを付与し�
 | slack_webhook_url | 通知先のSlackのWebHook URL |
 | timeout | タイムアウト(秒)。この時間指定されたサイトから応答が無ければエラーと見なします(オプション。デフォルトは10秒) |
 
+## Dockerでの実行方法
+
+Dockerfileからイメージをビルドし、実行します。
+このとき、引数には上記のパラメータを指定してください。
+
+    docker build -t webmonitor .
+    docker run -e "URL=http://example.com" -e "SLACK_WEBHOOK_URL=https://hooks.slack.com/services/..." -e "TIMEOUT=10" webmonitor
